@@ -8,16 +8,15 @@ from selenium.webdriver.support.ui import Select
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.chrome.options import Options
 
-
 options = Options()
-options.add_arguement("--headless")
-options.add_arguement("window-size=1400,1500")
-options.add_arguement("--disable-gpu")
-options.add_arguement("--no-sandbox")
-options.add_arguement("start-maximized")
-options.add_arguement("enable-automation")
-options.add_arguement("--disable-infobars")
-options.add_arguement("--disable-dev-shm-usage")
+options.add_argument("--headless")
+options.add_argument("window-size=1400,1500")
+options.add_argument("--disable-gpu")
+options.add_argument("--no-sandbox")
+options.add_argument("start-maximized")
+options.add_argument("enable-automation")
+options.add_argument("--disable-infobars")
+options.add_argument("--disable-dev-shm-usage")
 
 
 driver = webdriver.Chrome(options=options)
@@ -257,4 +256,3 @@ def delete_test_user():
             print(f'User with email {locators.email} got deleted.')
         else:
             print(f'User with email {locators.email} not found.')
-
